@@ -6,6 +6,8 @@ let doc = [
     { coctel: 'whiskey', count: 0 },
     { coctel: 'whiskeycoca', count: 0 },
     { coctel: 'gin', count: 0 },
+    { coctel: 'mojito', count: 0 },
+    { coctel: 'cubalibre', count: 0 }
 ];
 localStorage.setItem("doc", JSON.stringify(doc));
 
