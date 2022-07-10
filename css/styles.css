@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.coctel {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: grid;
+    position: relative;
+}
+
+button#reload {
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: 20px;
+}
