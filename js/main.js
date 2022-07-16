@@ -7,13 +7,19 @@ let doc = [
     { coctel: 'whiskeycoca', count: 0 },
     { coctel: 'gin', count: 0 },
     { coctel: 'mojito', count: 0 },
-    { coctel: 'cubalibre', count: 0 }
+    { coctel: 'cubalibre', count: 0 },
+    { coctel: 'bloodymary', count: 0 },
+    { coctel: 'mora', count: 0 },
+    { coctel: 'jack', count: 0 },
+    { coctel: 'jacklemonade', count: 0 },
+    { coctel: 'jackhoneysmash', count: 0 },
+    { coctel: 'roncoca', count: 0 },
+    { coctel: 'vodkashot', count: 0 }
 ];
 localStorage.setItem("doc", JSON.stringify(doc));
 
 for (const el of btn) {
     el.addEventListener("click", function (e) {
-        console.log(e.target);
         sum(e.target.id);
     })
 }
@@ -27,6 +33,7 @@ const sum = (id) => {
     doc = JSON.parse(doc);
     for (let i = 0; i < doc.length; i++) {
         if (doc[i].coctel === id) {
+            console.log(doc[i].coctel);
             doc[i].count++;
         }
     }
@@ -39,7 +46,9 @@ const read = () => {
     let docObj = JSON.parse(doc);
     for (let i = 0; i < docObj.length; i++) {
         const { coctel, count } = docObj[i];
-        document.getElementById(coctel + "Count").innerHTML = count;
+        let id = coctel + "Count";
+        //console.log(document.getElementById(id));
+        document.getElementById(id).textContent = count;
     }
 }
 
